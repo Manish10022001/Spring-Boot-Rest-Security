@@ -1,0 +1,8 @@
+Enable spring security:
+    ->add maven dependency: spring-boot-starter-security
+    -> by adding security dependency , spring boot automatically secure all endpoints for application
+    ->default user name: user, and password is in console which is generated
+
+to override default username and password
+    ->application.properties
+        ->
