@@ -12,3 +12,14 @@ Basic Configuration
 -> Development process
     ->Create spring security configuration(@Configuration)
     ->Add users, passwords, and roles
+
+4.Restrict access based on roles
+    ->Define a SecurityFilterChain Bean
+    ->Configure Role-Based Authorization
+        ->Use authorizeHttpRequests() to set access rules
+        ->general syntax , use requestMatchers to restrict acces
+            ->requestMatchers( << add HTTP method to match on>>, <<add path to match on>>)
+                             .hasRole(<<authorized roles>>)
+             note: there there are multile role then use , .hasAnyRole(<<list of authorized roles>>)
+    -> return configured  securityFilterChain
+        ->return http.build();
