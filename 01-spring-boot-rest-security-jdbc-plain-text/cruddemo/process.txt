@@ -24,3 +24,14 @@ Basic Configuration
     -> return configured  securityFilterChain
         ->return http.build();
 
+.......................................................................................................
+.......................................................................................................
+
+SPRING SECURITY WITH USER ACCOUNTS STORED IN DATABASE USING JDBC
+
+->
+    ->Development process:
+        ->5.1 Develop SQL Script to set up database tables
+        ->5.2 Add database support to Maven POM file
+        ->5.3 Create JDBC properties file
+        ->5.4 Update Spring Security Configuration to use JDBC

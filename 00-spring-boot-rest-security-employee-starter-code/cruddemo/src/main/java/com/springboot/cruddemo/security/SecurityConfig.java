@@ -46,6 +46,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/employees/**").hasRole("EMPLOYEE") // USED **, means all sub-paths
                         .requestMatchers(HttpMethod.POST,"/employees").hasRole("MANAGER")
                         .requestMatchers(HttpMethod.PUT,"/employees").hasRole("MANAGER")
+                        .requestMatchers(HttpMethod.PATCH,"/employees/**").hasRole("MANAGER") // ADDED request match for patch - partial update
                         .requestMatchers(HttpMethod.DELETE,"/employees/**").hasRole("ADMIN")
         );
 
@@ -58,5 +59,4 @@ public class SecurityConfig {
 
         return http.build();
     }
-
 }
