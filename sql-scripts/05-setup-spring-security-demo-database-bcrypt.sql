@@ -26,9 +26,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` 
 VALUES 
-('john','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
-('mary','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
-('susan','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1);
+('john','{bcrypt}$2a$10$0b8nvLGYJNbD3AT2Ei6uqOyk05jUde7yEqHCboCsVW1LVdM7mFZ.S',1),
+('mary','{bcrypt}$2a$10$0b8nvLGYJNbD3AT2Ei6uqOyk05jUde7yEqHCboCsVW1LVdM7mFZ.S',1),
+('susan','{bcrypt}$2a$10$0b8nvLGYJNbD3AT2Ei6uqOyk05jUde7yEqHCboCsVW1LVdM7mFZ.S',1);
 
 
 --
