@@ -1,0 +1,56 @@
+Enable spring security:
+    ->add maven dependency: spring-boot-starter-security
+    -> by adding security dependency , spring boot automatically secure all endpoints for application
+    ->default user name: user, and password is in console which is generated
+
+to override default username and password
+    ->application.properties
+        ->spring.security.user.name = lionel
+          spring.security.user.password = messi10
+
+Basic Configuration
+-> Development process
+    ->Create spring security configuration(@Configuration)
+    ->Add users, passwords, and roles
+
+4.Restrict access based on roles
+    ->Define a SecurityFilterChain Bean
+    ->Configure Role-Based Authorization
+        ->Use authorizeHttpRequests() to set access rules
+        ->general syntax , use requestMatchers to restrict acces
+            ->requestMatchers( << add HTTP method to match on>>, <<add path to match on>>)
+                             .hasRole(<<authorized roles>>)
+             note: there there are multile role then use , .hasAnyRole(<<list of authorized roles>>)
+    -> return configured  securityFilterChain
+        ->return http.build();
+
+.......................................................................................................
+.......................................................................................................
+
+SPRING SECURITY WITH USER ACCOUNTS STORED IN DATABASE USING JDBC
+
+-> with plain text as password
+    ->Development process:
+        ->5.1 Develop SQL Script to set up database tables
+        ->5.2 Add database support to Maven POM file
+        ->5.3 Create JDBC properties file
+        ->5.4 Update Spring Security Configuration to use JDBC
+
+-> with bcryt password made from website: www.luv2code.com/generate-bcrypt-password
+    ->Development process:
+              ->5.1 Develop SQL Script to set up database tables
+              ->5.2 Add database support to Maven POM file
+              ->5.3 Create JDBC properties file
+              ->5.4 Update Spring Security Configuration to use JDBC
+
+-> bcrypt password with custom table names
+    ->for security scheme customization
+        -tell spring how to query custom tables
+        -provide query to find user by username
+        -provide query to find authorities/roles by user name
+
+    ->Development Process
+        ->6.2 create custom tables with SQL
+        ->6.2 update spring security configuration
+            -provide query to find user by username
+            -provide query to find authorities / roles by username

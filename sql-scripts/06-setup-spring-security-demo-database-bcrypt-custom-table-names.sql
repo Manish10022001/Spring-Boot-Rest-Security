@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS `members`;
 
 CREATE TABLE `members` (
   `user_id` varchar(50) NOT NULL,
-  `pw` char(68) NOT NULL,
+  `password` char(68) NOT NULL,
   `active` tinyint NOT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -26,9 +26,9 @@ CREATE TABLE `members` (
 
 INSERT INTO `members`
 VALUES
-('john','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
-('mary','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
-('susan','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1);
+('john','{bcrypt}$2a$10$1HULf70d2skTjezqsBvSuunGgAoGdIw/7qOHsxaiQBSvOv1GDsb/S',1),
+('mary','{bcrypt}$2a$10$1HULf70d2skTjezqsBvSuunGgAoGdIw/7qOHsxaiQBSvOv1GDsb/S',1),
+('susan','{bcrypt}$2a$10$1HULf70d2skTjezqsBvSuunGgAoGdIw/7qOHsxaiQBSvOv1GDsb/S',1);
 
 
 --
